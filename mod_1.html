@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business English Speaking</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #e0f2fe, #bfdbfe);
+            color: #1f2937;
+        }
+        .activity-card {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        /* Style for drag and drop */
+        .drag-item {
+            cursor: grab;
+            transition: all 0.2s ease;
+        }
+        .drag-item.dragging {
+            opacity: 0.5;
+            cursor: grabbing;
+        }
+        .drag-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .drop-target {
+            background-color: #e0f2fe;
+            border: 2px dashed #93c5fd;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 sm:p-8 md:p-12">
+    <div class="max-w-4xl mx-auto space-y-12">
+        <!-- Header -->
+        <header class="text-center py-8">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-blue-900 drop-shadow-md">
+                Business English Speaking
+            </h1>
+            <p class="mt-4 text-lg text-blue-800 font-medium">
+                Enhance your professional communication skills with real-world scenarios.
+            </p>
+        </header>
+
+        <!-- Activities Section -->
+        <main class="space-y-12">
+            <!-- Starting a Conversation Activity -->
+            <section id="starting-a-conversation" class="activity-card rounded-3xl p-6 sm:p-8">
+                <h2 class="text-2xl sm:text-3xl font-bold text-blue-700">Starting a Conversation</h2>
+                <p class="mt-2 text-gray-700">
+                    Practice using phrases for starting and maintaining a conversation in a business setting.
+                </p>
+
+                <div class="mt-6 space-y-8">
+                    <!-- Conversation Practice -->
+                    <div class="bg-blue-50/70 p-4 sm:p-6 rounded-2xl border border-blue-200">
+                        <h3 class="text-xl font-semibold text-blue-800">
+                            Activity 1: Conversation Practice
+                        </h3>
+                        <p class="mt-2 text-gray-800">
+                            Read and practice the conversations below. Focus on pronunciation, intonation, and rhythm. You can click on the text to highlight and practice each line.
+                        </p>
+                        
+                        <div id="conversation-texts" class="mt-4 space-y-4 text-lg">
+                            <!-- Conversation 1 -->
+                            <div>
+                                <h4 class="font-bold text-blue-900">Conversation 1</h4>
+                                <ul class="space-y-2 mt-2">
+                                    <li class="cursor-pointer hover:bg-yellow-200 p-2 rounded-lg transition-colors duration-200">A: That was really interesting what the last speaker said about opening bank accounts in the Cayman Islands.</li>
+                                    <li class="cursor-pointer hover:bg-yellow-200 p-2 rounded-lg transition-colors duration-200">B: Yes, it was. So, what do you do exactly?</li>
+                                    <li class="cursor-pointer hover:bg-yellow-200 p-2 rounded-lg transition-colors duration-200">A: I'm an auditor, a forensic auditor.</li>
+                                    <li class="cursor-pointer hover:bg-yellow-200 p-2 rounded-lg transition-colors duration-200">B: Ah, um, you're a forensic, um, auditor?</li>
+                                    <li class="cursor-pointer hover:bg-yellow-200 p-2 rounded-lg transition-colors duration-200">A: Yes, that's right.</li>
+                                    <li class="cursor-pointer hover:bg-yellow-200 p-2 rounded-lg transition-colors duration-200">B: Right, oh. I see. Look at the time! I must get to the next presentation...</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Conversation 2 -->
+                            <div>
+                                <h4 class="font-bold text-blue-900">Conversation 2</h4>
+                                <ul class="space-y-2 mt-2">
+                                    <li class="cursor-pointer hover:bg-yellow-200 p-2 rounded-lg transition-colors duration-200">C: Mmm, lovely coffee! I needed that. I just flew in from London very early this morning. How did you get here?</li>
+                                    <li class="cursor-pointer hover:bg-yellow-200 p-2 rounded-lg transition-colors duration-200">D: I came on the TGV train from Paris.</li>
+                                    <li class="cursor-pointer hover:bg-yellow-200 p-2 rounded-lg transition-colors duration-200">C: Really? I've never been on the TGV. How long did that take?</li>
+                                    <li class="cursor-pointer hover:bg-yellow-200 p-2 rounded-lg transition-colors duration-200">D: Oh, about four hours. But I was able to have breakfast and do some reading.</li>
+                                    <li class="cursor-pointer hover:bg-yellow-200 p-2 rounded-lg transition-colors duration-200">C: That sounds nice. I must try it sometime. Marseilles's really beautiful, isn't it?</li>
+                                    <li class="cursor-pointer hover:bg-yellow-200 p-2 rounded-lg transition-colors duration-200">D: Yes, it is. Have you been here before? If you haven't, you must...</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Role-Playing Activity -->
+                    <div class="bg-blue-50/70 p-4 sm:p-6 rounded-2xl border border-blue-200">
+                        <h3 class="text-xl font-semibold text-blue-800">
+                            Activity 2: Role-Play
+                        </h3>
+                        <p class="mt-2 text-gray-800">
+                            Use the conversations above as a guide and practice a new conversation with a partner. Use the phrases you learned to start the conversation, ask questions, and respond naturally.
+                        </p>
+                        
+                        <div class="mt-4 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                            <textarea id="my-role-play" rows="6" placeholder="Write your conversation script here..." class="w-full p-4 rounded-xl border-2 border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow resize-none"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Small Talk & Introductions Activity -->
+            <section id="small-talk" class="activity-card rounded-3xl p-6 sm:p-8">
+                <h2 class="text-2xl sm:text-3xl font-bold text-blue-700">Small Talk & Introductions</h2>
+                <p class="mt-2 text-gray-700">
+                    Learn and practice phrases for making small talk and getting to know colleagues.
+                </p>
+
+                <div class="mt-6 space-y-8">
+                    <!-- Conversation Practice -->
+                    <div class="bg-blue-50/70 p-4 sm:p-6 rounded-2xl border border-blue-200">
+                        <h3 class="text-xl font-semibold text-blue-800">
+                            Activity 3: Conversation Practice
+                        </h3>
+                        <p class="mt-2 text-gray-800">
+                            Read and practice the following conversations. Pay attention to how the speakers ask about work and personal life.
+                        </p>
+                        
+                        <div id="conversation-texts-2" class="mt-4 space-y-4 text-lg">
+                            <!-- Conversation 3 -->
+                            <div>
+                                <h4 class="font-bold text-blue-900">Conversation 3</h4>
+                                <ul class="space-y-2 mt-2">
+                                    <li class="cursor-pointer hover:bg-yellow-200 p-2 rounded-lg transition-colors duration-200">E: Really? Where do you come from then?</li>
+                                    <li class="cursor-pointer hover:bg-yellow-200 p-2 rounded-lg transition-colors duration-200">F: Garmisch-Partenkirchen. It's in the mountains just near Munich. What about you?</li>
+                                    <li class="cursor-pointer hover:bg-yellow-200 p-2 rounded-lg transition-colors duration-200">E: I'm from Cork in Ireland. The high street is supposed to have more pubs than any other town in Ireland.</li>
+                                    <li class="cursor-pointer hover:bg-yellow-200 p-2 rounded-lg transition-colors duration-200">F: Really? I'm going there on a business trip soon to visit the Apple factory. I must see if I can find time to visit some...</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Conversation 4 -->
+                            <div>
+                                <h4 class="font-bold text-blue-900">Conversation 4</h4>
+                                <ul class="space-y-2 mt-2">
+                                    <li class="cursor-pointer hover:bg-yellow-200 p-2 rounded-lg transition-colors duration-200">G: ...and then I went jogging early this morning along the sea. Fantastic sunrise coming up over the sea. Really? Sunrise, you say?</li>
+                                    <li class="cursor-pointer hover:bg-yellow-200 p-2 rounded-lg transition-colors duration-200">H: Yes, amazing! Do you like jogging? You should try it, you know. It makes you feel really great all day long. Just set the alarm for 5.30, jump out of bed and after you've been running for about an hour or so, go back, have a shower and -</li>
+                                    <li class="cursor-pointer hover:bg-yellow-200 p-2 rounded-lg transition-colors duration-200">G: Sorry, but do you know where I can smoke? I think I want a cigarette before the next presentation. Ah, that way? Thanks.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Role-Playing Activity -->
+                    <div class="bg-blue-50/70 p-4 sm:p-6 rounded-2xl border border-blue-200">
+                        <h3 class="text-xl font-semibold text-blue-800">
+                            Activity 4: Role-Play
+                        </h3>
+                        <p class="mt-2 text-gray-800">
+                            Create your own small talk conversation with a partner. Use phrases from above to discuss where you're from, hobbies, or recent events.
+                        </p>
+                        
+                        <div class="mt-4 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                            <textarea id="my-role-play-2" rows="6" placeholder="Write your small talk script here..." class="w-full p-4 rounded-xl border-2 border-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow resize-none"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Understanding Conversation Strategies Activity -->
+            <section id="understanding-strategies" class="activity-card rounded-3xl p-6 sm:p-8">
+                <h2 class="text-2xl sm:text-3xl font-bold text-blue-700">Understanding Conversation Strategies</h2>
+                <p class="mt-2 text-gray-700">
+                    Look back at the previous conversations and match them to the strategies they illustrate.
+                </p>
+
+                <div class="mt-6 flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8">
+                    <!-- Conversations to Match -->
+                    <div class="w-full md:w-1/2">
+                        <h3 class="text-xl font-semibold text-blue-800">Conversations</h3>
+                        <ul class="mt-4 space-y-4 text-lg">
+                            <li class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                <span class="font-bold text-blue-900">Conversation 1:</span>
+                            </li>
+                            <li class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                <span class="font-bold text-blue-900">Conversation 2:</span>
+                            </li>
+                            <li class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                <span class="font-bold text-blue-900">Conversation 3:</span>
+                            </li>
+                            <li class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                <span class="font-bold text-blue-900">Conversation 4:</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Strategies -->
+                    <div class="w-full md:w-1/2">
+                        <h3 class="text-xl font-semibold text-blue-800">Strategies</h3>
+                        <ul class="mt-4 space-y-4 text-lg">
+                            <li class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                <span class="font-bold text-blue-900">A:</span> Talk about ordinary things with conviction and enthusiasm.
+                            </li>
+                            <li class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                <span class="font-bold text-blue-900">B:</span> Match your mood to that of the speaker.
+                            </li>
+                            <li class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                <span class="font-bold text-blue-900">C:</span> When saying where you come from, add something interesting about the place.
+                            </li>
+                            <li class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                                <span class="font-bold text-blue-900">D:</span> When saying what your job is, add a small piece of information about it as well.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Answer Key -->
+                <div class="mt-8 text-center">
+                    <button id="show-answer-btn" class="px-6 py-3 bg-blue-500 text-white font-bold rounded-full shadow-lg hover:bg-blue-600 transition-colors duration-300">
+                        Show Answers
+                    </button>
+                    <div id="answer-key" class="mt-4 hidden p-6 bg-blue-100 rounded-xl border-2 border-blue-300 text-left">
+                        <h4 class="font-bold text-blue-900 mb-2">Answer Key:</h4>
+                        <ul class="space-y-2 text-lg">
+                            <li>Conversation 1: <span class="font-semibold text-blue-800">D</span></li>
+                            <li>Conversation 2: <span class="font-semibold text-blue-800">B</span></li>
+                            <li>Conversation 3: <span class="font-semibold text-blue-800">C</span></li>
+                            <li>Conversation 4: <span class="font-semibold text-blue-800">A</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Saying it Accurately Activity -->
+            <section id="saying-it-accurately" class="activity-card rounded-3xl p-6 sm:p-8">
+                <h2 class="text-2xl sm:text-3xl font-bold text-blue-700">Saying it Accurately</h2>
+                <p class="mt-2 text-gray-700">
+                    Complete the sentences with the correct words from the box.
+                </p>
+
+                <div class="mt-6">
+                    <div class="flex flex-wrap gap-2 justify-center bg-blue-100 p-4 rounded-xl mb-6">
+                        <span class="word-box bg-blue-200 text-blue-900 px-4 py-2 rounded-full cursor-pointer hover:bg-blue-300 transition-colors duration-200">looking</span>
+                        <span class="word-box bg-blue-200 text-blue-900 px-4 py-2 rounded-full cursor-pointer hover:bg-blue-300 transition-colors duration-200">from</span>
+                        <span class="word-box bg-blue-200 text-blue-900 px-4 py-2 rounded-full cursor-pointer hover:bg-blue-300 transition-colors duration-200">long</span>
+                        <span class="word-box bg-blue-200 text-blue-900 px-4 py-2 rounded-full cursor-pointer hover:bg-blue-300 transition-colors duration-200">been</span>
+                        <span class="word-box bg-blue-200 text-blue-900 px-4 py-2 rounded-full cursor-pointer hover:bg-blue-300 transition-colors duration-200">do</span>
+                        <span class="word-box bg-blue-200 text-blue-900 px-4 py-2 rounded-full cursor-pointer hover:bg-blue-300 transition-colors duration-200">means</span>
+                        <span class="word-box bg-blue-200 text-blue-900 px-4 py-2 rounded-full cursor-pointer hover:bg-blue-300 transition-colors duration-200">get</span>
+                        <span class="word-box bg-blue-200 text-blue-900 px-4 py-2 rounded-full cursor-pointer hover:bg-blue-300 transition-colors duration-200">lovely</span>
+                        <span class="word-box bg-blue-200 text-blue-900 px-4 py-2 rounded-full cursor-pointer hover:bg-blue-300 transition-colors duration-200">come</span>
+                        <span class="word-box bg-blue-200 text-blue-900 px-4 py-2 rounded-full cursor-pointer hover:bg-blue-300 transition-colors duration-200">isn't</span>
+                    </div>
+
+                    <ul id="fill-in-blanks" class="space-y-4 text-lg">
+                        <li data-answer="been">1. Have you <span class="blank border-b-2 border-blue-500 w-24 inline-block text-center text-blue-900"></span> here before?</li>
+                        <li data-answer="lovely">2. Mmm, <span class="blank border-b-2 border-blue-500 w-24 inline-block text-center text-blue-900"></span> coffee! I needed that.</li>
+                        <li data-answer="get">3. How did you <span class="blank border-b-2 border-blue-500 w-24 inline-block text-center text-blue-900"></span> here?</li>
+                        <li data-answer="long">4. How <span class="blank border-b-2 border-blue-500 w-24 inline-block text-center text-blue-900"></span> did that take?</li>
+                        <li data-answer="means">5. I'm a forensic auditor, which <span class="blank border-b-2 border-blue-500 w-24 inline-block text-center text-blue-900"></span> that I help banks make sure none of their staff are doing anything illegal.</li>
+                        <li data-answer="looking">6. I'm certainly <span class="blank border-b-2 border-blue-500 w-24 inline-block text-center text-blue-900"></span> forward to dinner.</li>
+                        <li data-answer="from">7. I'm <span class="blank border-b-2 border-blue-500 w-24 inline-block text-center text-blue-900"></span> Athens. It's a great place to live.</li>
+                        <li data-answer="isn't">8. Marseilles's really beautiful, <span class="blank border-b-2 border-blue-500 w-24 inline-block text-center text-blue-900"></span> it?</li>
+                        <li data-answer="do">9. So, what do you <span class="blank border-b-2 border-blue-500 w-24 inline-block text-center text-blue-900"></span> exactly?</li>
+                        <li data-answer="come">10. Where do you <span class="blank border-b-2 border-blue-500 w-24 inline-block text-center text-blue-900"></span> from then?</li>
+                    </ul>
+
+                    <div class="mt-6 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button id="check-answers-btn" class="w-full px-6 py-3 bg-green-500 text-white font-bold rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300">
+                            Check Answers
+                        </button>
+                        <button id="reset-answers-btn" class="w-full px-6 py-3 bg-red-500 text-white font-bold rounded-full shadow-lg hover:bg-red-600 transition-colors duration-300">
+                            Reset
+                        </button>
+                    </div>
+
+                    <div id="feedback" class="mt-4 p-4 rounded-lg text-center font-bold"></div>
+                </div>
+            </section>
+            
+            <!-- Reordering the Dialogue Activity -->
+            <section id="reorder-dialogue" class="activity-card rounded-3xl p-6 sm:p-8">
+                <h2 class="text-2xl sm:text-3xl font-bold text-blue-700">Reordering the Dialogue</h2>
+                <p class="mt-2 text-gray-700">
+                    Drag and drop the conversation lines to put them in the correct order.
+                </p>
+
+                <div class="mt-6">
+                    <ul id="dialogue-list" class="space-y-4 text-lg">
+                        <li class="drag-item bg-blue-50 p-4 rounded-lg border border-blue-200" draggable="true" data-order="3">
+                            <span class="font-bold text-blue-900">Alex:</span> No, it's my first trip.
+                        </li>
+                        <li class="drag-item bg-blue-50 p-4 rounded-lg border border-blue-200" draggable="true" data-order="6">
+                            <span class="font-bold text-blue-900">Sophia:</span> I'm a forensic auditor, which means that I help hedge funds and banks make sure none of their staff are doing anything illegal.
+                        </li>
+                        <li class="drag-item bg-blue-50 p-4 rounded-lg border border-blue-200" draggable="true" data-order="1">
+                            <span class="font-bold text-blue-900">Alex:</span> It's a beautiful day today, isn't it?
+                        </li>
+                        <li class="drag-item bg-blue-50 p-4 rounded-lg border border-blue-200" draggable="true" data-order="7">
+                            <span class="font-bold text-blue-900">Alex:</span> Really? And do you often find any illegal activities?
+                        </li>
+                        <li class="drag-item bg-blue-50 p-4 rounded-lg border border-blue-200" draggable="true" data-order="2">
+                            <span class="font-bold text-blue-900">Sophia:</span> Absolutely, I love New York in the spring. Have you been here before?
+                        </li>
+                        <li class="drag-item bg-blue-50 p-4 rounded-lg border border-blue-200" draggable="true" data-order="8">
+                            <span class="font-bold text-blue-900">Sophia:</span> More than you might expect! Anyway, we'd better get back to the presentation.
+                        </li>
+                        <li class="drag-item bg-blue-50 p-4 rounded-lg border border-blue-200" draggable="true" data-order="5">
+                            <span class="font-bold text-blue-900">Alex:</span> I'm from Athens. It's a great place to live. What do you do?
+                        </li>
+                        <li class="drag-item bg-blue-50 p-4 rounded-lg border border-blue-200" draggable="true" data-order="4">
+                            <span class="font-bold text-blue-900">Sophia:</span> Oh, you must visit the Guggenheim Museum and the Empire State Building. Where do you come from?
+                        </li>
+                    </ul>
+
+                    <div class="mt-6 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button id="check-dialogue-btn" class="w-full px-6 py-3 bg-green-500 text-white font-bold rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300">
+                            Check Order
+                        </button>
+                        <button id="reset-dialogue-btn" class="w-full px-6 py-3 bg-red-500 text-white font-bold rounded-full shadow-lg hover:bg-red-600 transition-colors duration-300">
+                            Reset
+                        </button>
+                    </div>
+                     <div id="dialogue-feedback" class="mt-4 p-4 rounded-lg text-center font-bold"></div>
+                </div>
+            </section>
+
+            <!-- Complete the Conversation Activity -->
+            <section id="complete-conversation" class="activity-card rounded-3xl p-6 sm:p-8">
+                <h2 class="text-2xl sm:text-3xl font-bold text-blue-700">Complete the Conversation</h2>
+                <p class="mt-2 text-gray-700">
+                    Complete the conversation between Jon and Marco with the correct questions or phrases.
+                </p>
+
+                <div class="mt-6">
+                    <div class="flex flex-wrap gap-2 justify-center bg-blue-100 p-4 rounded-xl mb-6">
+                        <span class="word-box bg-blue-200 text-blue-900 px-4 py-2 rounded-full cursor-pointer hover:bg-blue-300 transition-colors duration-200" draggable="true" data-phrase="... isn't it?">... isn't it?</span>
+                        <span class="word-box bg-blue-200 text-blue-900 px-4 py-2 rounded-full cursor-pointer hover:bg-blue-300 transition-colors duration-200" draggable="true" data-phrase="So, what do you do exactly?">So, what do you do exactly?</span>
+                        <span class="word-box bg-blue-200 text-blue-900 px-4 py-2 rounded-full cursor-pointer hover:bg-blue-300 transition-colors duration-200" draggable="true" data-phrase="How long did that take?">How long did that take?</span>
+                        <span class="word-box bg-blue-200 text-blue-900 px-4 py-2 rounded-full cursor-pointer hover:bg-blue-300 transition-colors duration-200" draggable="true" data-phrase="Have you been here before?">Have you been here before?</span>
+                        <span class="word-box bg-blue-200 text-blue-900 px-4 py-2 rounded-full cursor-pointer hover:bg-blue-300 transition-colors duration-200" draggable="true" data-phrase="How did you get here?">How did you get here?</span>
+                        <span class="word-box bg-blue-200 text-blue-900 px-4 py-2 rounded-full cursor-pointer hover:bg-blue-300 transition-colors duration-200" draggable="true" data-phrase="Where do you come from then?">Where do you come from then?</span>
+                    </div>
+
+                    <div class="space-y-4 text-lg p-4 bg-white rounded-xl">
+                        <p><strong>Jon:</strong> This hotel is wonderfully designed, <span class="drop-target blank border-b-2 border-blue-500 w-56 inline-block text-center text-blue-900"></span></p>
+                        <p><strong>Marco:</strong> Yes, I love modern architecture. <span class="drop-target blank border-b-2 border-blue-500 w-56 inline-block text-center text-blue-900"></span></p>
+                        <p><strong>Jon:</strong> I'm from Dubai, home of the world's tallest building, the Burj Khalifa. And you?</p>
+                        <p><strong>Marco:</strong> I live in Como on the Italian lakes.</p>
+                        <p><strong>Jon:</strong> I've been there on holiday. It's beautiful. <span class="drop-target blank border-b-2 border-blue-500 w-56 inline-block text-center text-blue-900"></span></p>
+                        <p><strong>Marco:</strong> I took the train from Milan.</p>
+                        <p><strong>Jon:</strong> <span class="drop-target blank border-b-2 border-blue-500 w-56 inline-block text-center text-blue-900"></span></p>
+                        <p><strong>Marco:</strong> About four hours. It gave me a chance to catch up on some sleep!</p>
+                        <p><strong>Jon:</strong> <span class="drop-target blank border-b-2 border-blue-500 w-56 inline-block text-center text-blue-900"></span></p>
+                        <p><strong>Marco:</strong> I run a small restaurant. You'll have to stop by if you come to Como again! What about you?</p>
+                        <p><strong>Jon:</strong> I'm an interior designer. I mainly design the insides of shops and hotels.</p>
+                        <p><strong>Marco:</strong> Well, you can definitely stop by then and give me your opinion on my restaurant!</p>
+                    </div>
+
+                    <div class="mt-6 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button id="check-conversation-btn" class="w-full px-6 py-3 bg-green-500 text-white font-bold rounded-full shadow-lg hover:bg-green-600 transition-colors duration-300">
+                            Check Answers
+                        </button>
+                        <button id="reset-conversation-btn" class="w-full px-6 py-3 bg-red-500 text-white font-bold rounded-full shadow-lg hover:bg-red-600 transition-colors duration-300">
+                            Reset
+                        </button>
+                    </div>
+
+                    <div id="conversation-feedback" class="mt-4 p-4 rounded-lg text-center font-bold"></div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center py-8 text-gray-600">
+            <p>&copy; 2024 Business English Learners. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        const conversationLines = document.querySelectorAll('#conversation-texts li, #conversation-texts-2 li');
+        conversationLines.forEach(line => {
+            line.addEventListener('click', () => {
+                conversationLines.forEach(l => l.classList.remove('bg-yellow-300'));
+                line.classList.add('bg-yellow-300');
+            });
+        });
+
+        // Toggle the visibility of the answer key
+        document.getElementById('show-answer-btn').addEventListener('click', function() {
+            const answerKey = document.getElementById('answer-key');
+            answerKey.classList.toggle('hidden');
+            if (answerKey.classList.contains('hidden')) {
+                this.textContent = 'Show Answers';
+            } else {
+                this.textContent = 'Hide Answers';
+            }
+        });
+
+        // Interactive fill-in-the-blank activity
+        const words = document.querySelectorAll('.word-box');
+        const blanks = document.querySelectorAll('.blank');
+        const checkBtn = document.getElementById('check-answers-btn');
+        const resetBtn = document.getElementById('reset-answers-btn');
+        const feedback = document.getElementById('feedback');
+        let selectedWord = null;
+
+        words.forEach(word => {
+            word.addEventListener('click', () => {
+                // Deselect previous word
+                if (selectedWord) {
+                    selectedWord.classList.remove('ring-4', 'ring-blue-500');
+                }
+                selectedWord = word;
+                selectedWord.classList.add('ring-4', 'ring-blue-500');
+            });
+        });
+
+        blanks.forEach(blank => {
+            blank.addEventListener('click', () => {
+                if (selectedWord) {
+                    blank.textContent = selectedWord.textContent;
+                    selectedWord.style.display = 'none';
+                    selectedWord.classList.remove('ring-4', 'ring-blue-500');
+                    selectedWord = null;
+                }
+            });
+        });
+
+        checkBtn.addEventListener('click', () => {
+            let correctCount = 0;
+            let totalCount = blanks.length;
+            
+            blanks.forEach(blank => {
+                const parentListItem = blank.closest('li');
+                const correctAnswer = parentListItem.dataset.answer;
+                
+                if (blank.textContent.trim().toLowerCase() === correctAnswer.toLowerCase()) {
+                    blank.style.color = '#10B981'; // Green
+                    correctCount++;
+                } else {
+                    blank.style.color = '#EF4444'; // Red
+                }
+            });
+
+            feedback.textContent = `You got ${correctCount} out of ${totalCount} correct!`;
+            if (correctCount === totalCount) {
+                feedback.classList.remove('bg-red-100');
+                feedback.classList.add('bg-green-100');
+            } else {
+                feedback.classList.remove('bg-green-100');
+                feedback.classList.add('bg-red-100');
+            }
+        });
+
+        resetBtn.addEventListener('click', () => {
+            blanks.forEach(blank => {
+                blank.textContent = '';
+                blank.style.color = '';
+            });
+            words.forEach(word => {
+                word.style.display = 'inline-block';
+            });
+            feedback.textContent = '';
+            feedback.classList.remove('bg-green-100', 'bg-red-100');
+        });
+
+        // Drag and Drop Logic
+        const dialogueList = document.getElementById('dialogue-list');
+        let dragSrcEl = null;
+
+        function handleDragStart(e) {
+            this.style.opacity = '0.4';
+            dragSrcEl = this;
+            e.dataTransfer.effectAllowed = 'move';
+            e.dataTransfer.setData('text/html', this.innerHTML);
+        }
+
+        function handleDragOver(e) {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'move';
+            return false;
+        }
+
+        function handleDragEnter(e) {
+            this.classList.add('bg-blue-200');
+        }
+
+        function handleDragLeave(e) {
+            this.classList.remove('bg-blue-200');
+        }
+
+        function handleDrop(e) {
+            e.stopPropagation();
+            if (dragSrcEl !== this) {
+                const parentNode = this.parentNode;
+                const children = Array.from(parentNode.children);
+                const sourceIndex = children.indexOf(dragSrcEl);
+                const targetIndex = children.indexOf(this);
+                
+                if (sourceIndex > targetIndex) {
+                    parentNode.insertBefore(dragSrcEl, this);
+                } else {
+                    parentNode.insertBefore(dragSrcEl, this.nextSibling);
+                }
+            }
+            return false;
+        }
+
+        function handleDragEnd(e) {
+            this.style.opacity = '1';
+            const items = document.querySelectorAll('.drag-item');
+            items.forEach(item => {
+                item.classList.remove('bg-blue-200');
+            });
+        }
+
+        document.querySelectorAll('.drag-item').forEach(item => {
+            item.addEventListener('dragstart', handleDragStart);
+            item.addEventListener('dragover', handleDragOver);
+            item.addEventListener('dragenter', handleDragEnter);
+            item.addEventListener('dragleave', handleDragLeave);
+            item.addEventListener('drop', handleDrop);
+            item.addEventListener('dragend', handleDragEnd);
+        });
+
+        // Check and Reset Dialogue Order
+        const checkDialogueBtn = document.getElementById('check-dialogue-btn');
+        const resetDialogueBtn = document.getElementById('reset-dialogue-btn');
+        const dialogueFeedback = document.getElementById('dialogue-feedback');
+        
+        checkDialogueBtn.addEventListener('click', () => {
+            const items = document.querySelectorAll('#dialogue-list .drag-item');
+            let isCorrect = true;
+            items.forEach((item, index) => {
+                const correctOrder = parseInt(item.dataset.order);
+                if (correctOrder === index + 1) {
+                    item.style.backgroundColor = '#d1fae5'; // Green-100
+                } else {
+                    item.style.backgroundColor = '#fee2e2'; // Red-100
+                    isCorrect = false;
+                }
+            });
+
+            if (isCorrect) {
+                dialogueFeedback.textContent = 'Great job! The dialogue is in the correct order.';
+                dialogueFeedback.classList.remove('bg-red-100');
+                dialogueFeedback.classList.add('bg-green-100');
+            } else {
+                dialogueFeedback.textContent = 'Some lines are in the wrong place. Try again!';
+                dialogueFeedback.classList.remove('bg-green-100');
+                dialogueFeedback.classList.add('bg-red-100');
+            }
+        });
+
+        resetDialogueBtn.addEventListener('click', () => {
+            const originalOrder = [
+                { order: 3, text: "No, it's my first trip.", speaker: "Alex" },
+                { order: 6, text: "I'm a forensic auditor, which means that I help hedge funds and banks make sure none of their staff are doing anything illegal.", speaker: "Sophia" },
+                { order: 1, text: "It's a beautiful day today, isn't it?", speaker: "Alex" },
+                { order: 7, text: "Really? And do you often find any illegal activities?", speaker: "Alex" },
+                { order: 2, text: "Absolutely, I love New York in the spring. Have you been here before?", speaker: "Sophia" },
+                { order: 8, text: "More than you might expect! Anyway, we'd better get back to the presentation.", speaker: "Sophia" },
+                { order: 5, text: "I'm from Athens. It's a great place to live. What do you do?", speaker: "Alex" },
+                { order: 4, text: "Oh, you must visit the Guggenheim Museum and the Empire State Building. Where do you come from?", speaker: "Sophia" }
+            ];
+
+            const dialogueList = document.getElementById('dialogue-list');
+            dialogueList.innerHTML = '';
+            originalOrder.forEach(item => {
+                const li = document.createElement('li');
+                li.className = 'drag-item bg-blue-50 p-4 rounded-lg border border-blue-200';
+                li.setAttribute('draggable', 'true');
+                li.setAttribute('data-order', item.order);
+                li.innerHTML = `<span class="font-bold text-blue-900">${item.speaker}:</span> ${item.text}`;
+                dialogueList.appendChild(li);
+            });
+            
+            // Re-attach event listeners to new elements
+            document.querySelectorAll('.drag-item').forEach(item => {
+                item.addEventListener('dragstart', handleDragStart);
+                item.addEventListener('dragover', handleDragOver);
+                item.addEventListener('dragenter', handleDragEnter);
+                item.addEventListener('dragleave', handleDragLeave);
+                item.addEventListener('drop', handleDrop);
+                item.addEventListener('dragend', handleDragEnd);
+            });
+            dialogueFeedback.textContent = '';
+            dialogueFeedback.classList.remove('bg-green-100', 'bg-red-100');
+        });
+
+        // Complete Conversation Activity Logic
+        const conversationWords = document.querySelectorAll('#complete-conversation .word-box');
+        const conversationBlanks = document.querySelectorAll('#complete-conversation .blank');
+        const checkConversationBtn = document.getElementById('check-conversation-btn');
+        const resetConversationBtn = document.getElementById('reset-conversation-btn');
+        const conversationFeedback = document.getElementById('conversation-feedback');
+
+        let selectedConversationWord = null;
+
+        conversationWords.forEach(word => {
+            word.addEventListener('dragstart', (e) => {
+                e.dataTransfer.setData('text/plain', e.target.getAttribute('data-phrase'));
+                setTimeout(() => {
+                    e.target.style.display = 'none';
+                }, 0);
+            });
+        });
+
+        conversationBlanks.forEach(blank => {
+            blank.addEventListener('dragover', (e) => {
+                e.preventDefault();
+            });
+
+            blank.addEventListener('drop', (e) => {
+                e.preventDefault();
+                const phrase = e.dataTransfer.getData('text/plain');
+                if (phrase) {
+                    blank.textContent = phrase;
+                }
+            });
+        });
+
+        checkConversationBtn.addEventListener('click', () => {
+            const correctAnswers = [
+                "... isn't it?",
+                "Where do you come from then?",
+                "How did you get here?",
+                "How long did that take?",
+                "So, what do you do exactly?"
+            ];
+
+            let correctCount = 0;
+            conversationBlanks.forEach((blank, index) => {
+                if (blank.textContent.trim() === correctAnswers[index]) {
+                    blank.style.color = '#10B981'; // Green
+                    correctCount++;
+                } else {
+                    blank.style.color = '#EF4444'; // Red
+                }
+            });
+
+            conversationFeedback.textContent = `You got ${correctCount} out of 5 correct!`;
+            if (correctCount === 5) {
+                conversationFeedback.classList.remove('bg-red-100');
+                conversationFeedback.classList.add('bg-green-100');
+            } else {
+                conversationFeedback.classList.remove('bg-green-100');
+                conversationFeedback.classList.add('bg-red-100');
+            }
+        });
+
+        resetConversationBtn.addEventListener('click', () => {
+            conversationBlanks.forEach(blank => {
+                blank.textContent = '';
+                blank.style.color = '';
+            });
+            conversationWords.forEach(word => {
+                word.style.display = 'inline-block';
+            });
+            conversationFeedback.textContent = '';
+            conversationFeedback.classList.remove('bg-green-100', 'bg-red-100');
+        });
+    </script>
+</body>
+</html>
