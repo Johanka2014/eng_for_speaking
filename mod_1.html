@@ -42,7 +42,7 @@
     </style>
 </head>
 <body class="min-h-screen p-4 sm:p-8 md:p-12">
-    <div class="max-w-4xl mx-auto space-y-12">
+    <div class="max-w-6xl mx-auto space-y-12">
         <!-- Header -->
         <header class="text-center py-8">
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-blue-900 drop-shadow-md">
@@ -52,6 +52,23 @@
                 Enhance your professional communication skills with real-world scenarios.
             </p>
         </header>
+
+        <!-- Useful Tips Section -->
+        <section id="useful-tips" class="activity-card rounded-3xl p-6 sm:p-8">
+            <h2 class="text-2xl sm:text-3xl font-bold text-blue-700">Useful Tips</h2>
+            <p class="mt-2 text-gray-700">
+                Here are some tips to help you with your small talk and conversations.
+            </p>
+            <div class="mt-4 text-lg space-y-4 flex flex-col md:flex-row items-start md:items-center">
+                <ul class="list-disc list-inside space-y-2 text-gray-800 md:w-1/2">
+                    <li>Successful small talk is not about saying brilliant things. It's about commenting on and asking about ordinary things with conviction, interest, and enthusiasm.</li>
+                    <li>Match the mood of your conversation partner. If they are smiling and cheerful, be ready to laugh. If they seem serious, be serious too.</li>
+                    <li>Ask where your partner comes from and, when somebody asks you the same thing, be ready to add something interesting about the place.</li>
+                    <li>Ask what your partner does and, when you're asked the same question, don't only give a title. Add a small piece of interesting or amusing information about the job or responsibility.</li>
+                </ul>
+                <img src="https://johanka2014.github.io/eng_for_speaking/mod_1/introductions.png" alt="An image showing an outline of a person introducing themselves" class="mt-4 md:mt-0 md:ml-6 w-full md:w-1/2 rounded-xl shadow-lg">
+            </div>
+        </section>
 
         <!-- Activities Section -->
         <main class="space-y-12">
@@ -152,7 +169,6 @@
                                 <ul class="space-y-2 mt-2">
                                     <li class="cursor-pointer hover:bg-yellow-200 p-2 rounded-lg transition-colors duration-200">G: ...and then I went jogging early this morning along the sea. Fantastic sunrise coming up over the sea. Really? Sunrise, you say?</li>
                                     <li class="cursor-pointer hover:bg-yellow-200 p-2 rounded-lg transition-colors duration-200">H: Yes, amazing! Do you like jogging? You should try it, you know. It makes you feel really great all day long. Just set the alarm for 5.30, jump out of bed and after you've been running for about an hour or so, go back, have a shower and -</li>
-                                    <li class="cursor-pointer hover:bg-yellow-200 p-2 rounded-lg transition-colors duration-200">G: Sorry, but do you know where I can smoke? I think I want a cigarette before the next presentation. Ah, that way? Thanks.</li>
                                 </ul>
                             </div>
                         </div>
@@ -603,14 +619,12 @@
         const resetConversationBtn = document.getElementById('reset-conversation-btn');
         const conversationFeedback = document.getElementById('conversation-feedback');
 
-        let selectedConversationWord = null;
+        let draggedWordEl = null;
 
         conversationWords.forEach(word => {
             word.addEventListener('dragstart', (e) => {
+                draggedWordEl = e.target;
                 e.dataTransfer.setData('text/plain', e.target.getAttribute('data-phrase'));
-                setTimeout(() => {
-                    e.target.style.display = 'none';
-                }, 0);
             });
         });
 
@@ -621,9 +635,15 @@
 
             blank.addEventListener('drop', (e) => {
                 e.preventDefault();
-                const phrase = e.dataTransfer.getData('text/plain');
-                if (phrase) {
-                    blank.textContent = phrase;
+                if (blank.textContent.trim() === '') {
+                    const phrase = e.dataTransfer.getData('text/plain');
+                    if (phrase) {
+                        blank.textContent = phrase;
+                        if (draggedWordEl) {
+                            draggedWordEl.style.display = 'none';
+                            draggedWordEl = null;
+                        }
+                    }
                 }
             });
         });
